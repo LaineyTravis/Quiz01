@@ -1,4 +1,4 @@
 # Quiz01
 matrix vector multiplication
 
-code is under file on master branch labeled matVec
+The function is under file on master branch labeled matVec.
