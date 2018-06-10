@@ -1,36 +1,46 @@
 def matVec(matrix,vector):
   """
-  This functions uses matrix and vector as its arguments. It then multiplies the elements of the matrix by the elements of the vector before returning it as the resulting vector.
+  This functions uses matrix and vector as its arguments. It then multiplies the elements of the matrix by the elements of the vector before returning the resulting vector.
   """
-  result = []
+  answer = []
   for i in range(0,len(matrix)):
     temporary=[]
     for j in range(0,len(vector[0])):
         s = 0
         for k in range(0,len(matrix[0])):
             s += matrix[i][k]*vector[k][j]
+            """
+            Each of the row elements of the matrix are multiplied to the column elements of the vector, they're added together to create an 's' element.
+            """
         temporary.append(s)
-        #Adds new element s to back of the temporary []
-    result.append(temporary)
-    #Which then adds the elements of temporary to the back of the overall resulting vector.
+         #Adds the element 's' to the back of temporary [] as a new row element.
+    answer.append(temporary)
+    #Then the elements of temporary are added to the back of answer forming the resulting vector.
+    
+  return answer
+  
+  
+#These are the test variables for the function matVec
+  
+  
+testmatrix01 = [[1,2,4],[3,5,6],[8,2,2]]
+testmatrix02 = [[2],[5],[2]]
+testmatrix03 = "Squirrel Bubbles"
+testvector01 = [[1],[2],[9]]
+testvector02 = [[2,4,5],[6,5,5],[4,4,4]]
+testvector03 = 33
 
-  return result
-Testmatrix01 = [[1,2,4],[3,5,6],[8,2,2]]
-Testmatrix02 = [[2],[5],[2]]
-Testmatrix03 = "Squirrel Bubbles"
-Testvector01 = [[1],[2],[9]]
-Testvector02 = [[2,4,5],[6,5,5],[4,4,4]]
-Testvector03 = 33
-print(matVec(Testmatrix01,Testvector01))
+
+print(matVec(testmatrix01,testvector01))
 """
 Returns resulting vector [[41],[67],[30]]
 """
-#print(matVec(Testmatrix02,Testvector02))
+#print(matVec(testmatrix02,testvector02))
 """
 Returns resulting matrix [[4,8,10],[10,20,25],[4,8,10]]
-Since vector is 3x1 and matrix is 1x3 program uses only the first row of testvector02 and multiplies it to elements of Testmatrix02.
+Since vector is 3x1 and matrix is 1x3 program uses only the first row of testvector02 and multiplies it to elements of testmatrix02.
 """
-#print(matVec(Testmatrix03,Testvector03))
+#print(matVec(testmatrix03,testvector03))
 """
-Receives error since integer is not subscriptable to function.
+Receives error since integer and string are not subscriptable to the function.
 """
