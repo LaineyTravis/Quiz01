@@ -16,7 +16,6 @@ def matVec(matrix,vector):
     answer.append(temporary)
     #Then the elements of temporary are added to the back of answer forming the resulting vector.
   
-  
   return answer
   
   
