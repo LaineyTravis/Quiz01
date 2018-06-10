@@ -2,7 +2,7 @@ def matVec(matrix,vector):
   """
   This functions uses matrix and vector as its arguments. It then multiplies the elements of the matrix by the elements of the vector before returning it as the resulting vector.
   """
-  b = []
+  result = []
   for i in range(0,len(matrix)):
     temporary=[]
     for j in range(0,len(vector[0])):
@@ -11,10 +11,10 @@ def matVec(matrix,vector):
             s += matrix[i][k]*vector[k][j]
         temporary.append(s)
         #Adds new element s to back of the temporary []
-    b.append(temporary)
+    result.append(temporary)
     #Which then adds the elements of temporary to the back of the overall resulting vector b.
 
-  return b
+  return result
 Testmatrix01 = [[1,2,4],[3,5,6],[8,2,2]]
 Testmatrix02 = [[2],[5],[2]]
 Testmatrix03 = "Squirrel Bubbles"
