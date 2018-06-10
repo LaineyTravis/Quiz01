@@ -12,7 +12,7 @@ def matVec(matrix,vector):
         temporary.append(s)
         #Adds new element s to back of the temporary []
     result.append(temporary)
-    #Which then adds the elements of temporary to the back of the overall resulting vector b.
+    #Which then adds the elements of temporary to the back of the overall resulting vector.
 
   return result
 Testmatrix01 = [[1,2,4],[3,5,6],[8,2,2]]
