@@ -21,7 +21,6 @@ def matVec(matrix,vector):
   
 #These are the test variables for the function matVec
   
-  
 testmatrix01 = [[1,2,4],[3,5,6],[8,2,2]]
 testmatrix02 = [[2],[5],[2]]
 testmatrix03 = "Squirrel Bubbles"
